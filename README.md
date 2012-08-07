@@ -27,45 +27,47 @@ client = SmsPilot.new(api_key)
 
 * First way
 ```ruby
-client.sms(text, to, from, id)
+result = client.sms(text, to, from, id)
 ```
 *text* and *to* only required (both must be a string)
 
 * Second way
 ```ruby
-client.sms({text: "text message", to: "79999999999", from: "Sender", id: 123})
+result = client.sms({text: "text message", to: "79999999999", from: "Sender", id: 123})
 ```
 
 * Last way (mass sending)
 ```ruby
-client.sms([
-   {:to => "79999999999", :text => 'First message'},
-   {:to => "79999999998", :text => "Second message"},
-   {:to => "79999999997", :text => "Third message"}
+result = client.sms([
+   {to: "79999999999", text: 'First message'},
+   {to: "79999999998", text: "Second message"},
+   {to: "79999999997", text: "Third message"}
 ])
 ```
 
 #### SMS status checking
 * by id(s)
+
 ```ruby
-client.check(id1, id2, id3)
+result = client.check(id1, id2, id3)
 ```
 * by packet
+
 ```ruby
-client.check_packet(packet_id)
+result = client.check_packet(packet_id)
 ```
 
 #### Balance
 ```ruby
-client.balance
+result = client.balance
 ```
 
 #### User info
 ```ruby
-client.user_info
+result = client.user_info
 ```
 
 #### Inbound messages
 ```ruby
-client.inbound
+result = client.inbound
 ```
