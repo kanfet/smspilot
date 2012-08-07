@@ -46,13 +46,13 @@ result = client.sms([
 ```
 
 #### SMS status checking
-* by id(s)
 
+* by id(s)
 ```ruby
 result = client.check(id1, id2, id3)
 ```
-* by packet
 
+* by packet
 ```ruby
 result = client.check_packet(packet_id)
 ```
