@@ -39,7 +39,7 @@ result = client.sms({text: "text message", to: "79999999999", from: "Sender", id
 * Last way (mass sending)
 ```ruby
 result = client.sms([
-   {to: "79999999999", text: 'First message'},
+   {to: "79999999999", text: "First message"},
    {to: "79999999998", text: "Second message"},
    {to: "79999999997", text: "Third message"}
 ])
@@ -49,7 +49,7 @@ result = client.sms([
 
 * by id(s)
 ```ruby
-result = client.check(id1, id2, id3)
+result = client.check(server_id1, server_id2, server_id3)
 ```
 
 * by packet
